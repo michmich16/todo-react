@@ -1,1 +1,18 @@
 @import '../../assets/helper/Helper.scss';
+
+.addStyle{
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    vertical-align: middle;
+    .addButton{
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        span{
+            font-size: 40px;
+             
+        }
+    }
+}
