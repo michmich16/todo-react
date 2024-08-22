@@ -1,0 +1,41 @@
+@import './assets/helper/Helper.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+
+  body {
+    background-color: $yellow;
+    color: $black;
+    font-family: Indie Flower;
+
+    .mainHeader {
+      display: flex;
+      justify-content: space-between;
+      padding: 5rem 3rem;
+
+      .logoHeader {
+        text-decoration: underline;
+        font-size: 72px;
+        font-weight: 400;
+      }
+
+      .arrowButtonHeaderRight {
+        font-size: 60px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 5px;
+        padding:0 1rem;
+      }
+
+      .arrowButtonHeaderLeft {
+        font-size: 60px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 5px;
+        padding: 0 1rem;
+      }
+    }
+
+  }
+}

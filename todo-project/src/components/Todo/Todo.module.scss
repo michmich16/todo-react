@@ -1,0 +1,44 @@
+@import '../../assets/helper/Helper.scss';
+
+.todoStyle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-family: Inter;
+    padding: 0.5rem 2rem;
+
+    li {
+        list-style: none;
+
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+
+    .arrowButtonLeft {
+        font-size: 20px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 2px;
+        padding:0;
+    }
+
+    .deleteButton {
+        font-size: 20px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 2px;
+        padding:0.5rem;
+    }
+
+    .arrowButtonRight {
+        font-size: 20px;
+        background-color: transparent;
+        border-radius: 50%;
+        border: solid 2px;
+        padding:0;
+    }
+    }
+
+
+}
