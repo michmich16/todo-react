@@ -18,6 +18,8 @@ function App() {
     setIsModalOpen(false);
   };
 
+  // fra ChatGPT
+  // tilføj ny todo
   const handleAddTodo = (input) => {
     if (input.trim() === '') {
       alert("Du har ikke skrevet noget");
@@ -26,12 +28,14 @@ function App() {
     setTodos([...todos, input]);
     setIsModalOpen(false);
   };
-
+  
   // Slet den valgte
   const handleDeleteTodo = (index) => {
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
   };
+  //___________________
+
 
   // Slet alt
   const handleDeleteAll = () =>{
