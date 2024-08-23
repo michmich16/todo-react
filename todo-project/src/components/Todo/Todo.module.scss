@@ -11,33 +11,37 @@
         list-style: none;
 
     }
-    ul{
+
+    ul {
         display: flex;
         justify-content: space-between;
 
-    .arrowButtonLeft {
-        font-size: 20px;
-        background-color: transparent;
-        border-radius: 50%;
-        border: solid 2px;
-        padding:0 0.5rem;
-    }
+        .arrowButtonLeft {
+            font-size: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 2px;
+            padding: 0 0.5rem;
 
-    .deleteButton {
-        font-size: 20px;
-        background-color: transparent;
-        border-radius: 50%;
-        border: solid 2px;
-        padding:0 0.5rem;
-    }
+        }
 
-    .arrowButtonRight {
-        font-size: 20px;
-        background-color: transparent;
-        border-radius: 50%;
-        border: solid 2px;
-        padding:0 0.5rem;
-    }
+        .deleteButton {
+            font-size: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 2px;
+            padding: 0 0.5rem;
+
+        }
+
+        .arrowButtonRight {
+            font-size: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: solid 2px;
+            padding: 0 0.5rem;
+
+        }
     }
 
 

@@ -18,6 +18,9 @@
         text-decoration: underline;
         font-size: 72px;
         font-weight: 400;
+        @media only screen and (max-width: 600px){
+          font-size: 40px;
+        }
       }
 
       .arrowButtonHeaderRight {
@@ -26,6 +29,9 @@
         border-radius: 50%;
         border: solid 5px;
         padding:0 1rem;
+        @media only screen and (max-width: 600px){
+          font-size: 40px;
+        }
       }
 
       .arrowButtonHeaderLeft {
@@ -34,8 +40,13 @@
         border-radius: 50%;
         border: solid 5px;
         padding: 0 1rem;
+        @media only screen and (max-width: 600px){
+          font-size: 40px;
+        }
       }
     }
 
   }
+
+
 }
