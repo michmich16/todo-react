@@ -1,14 +1,27 @@
 import { useState } from 'react'
 import { Todo } from './components/Todo/Todo'
 import { Add } from './components/Add/Add'
+import { Modal } from './components/Modal/Modal'
 import './App.scss'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleSubmit = (input) => {
+    alert(`Submitted: ${input}`);
+  };
 
   return (
     <>
+         <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit} />
       <div className='mainHeader'>
         <button className='arrowButtonHeaderLeft'>⇦</button>
         <h1 className='logoHeader'>To Do</h1>
@@ -19,7 +32,7 @@ function App() {
       <Todo listText='makfnæoqwf' />
       <Todo listText='Opvask' />
 
-      <Add />
+      <Add onClick={handleOpenModal}/>
 
     </>
   )
