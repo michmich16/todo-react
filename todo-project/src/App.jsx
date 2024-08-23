@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Todo } from './components/Todo/Todo';
 import { Add } from './components/Add/Add';
 import { Modal } from './components/Modal/Modal';
+import { Delete } from './components/Delete/Delete';
 import './App.scss';
 
 function App() {
@@ -19,17 +20,23 @@ function App() {
 
   const handleAddTodo = (input) => {
     if (input.trim() === '') {
-      alert("You must write something!");
+      alert("Du har ikke skrevet noget");
       return;
     }
     setTodos([...todos, input]);
     setIsModalOpen(false);
   };
 
+  // Slet den valgte
   const handleDeleteTodo = (index) => {
     const newTodos = todos.filter((_, i) => i !== index);
     setTodos(newTodos);
   };
+
+  // Slet alt
+  const handleDeleteAll = () =>{
+    setTodos([]);
+  }
 
   return (
     <>
@@ -51,6 +58,7 @@ function App() {
       </ul>
 
       <Add onClick={handleOpenModal} />
+      <Delete handleDeleteAll={handleDeleteAll}/>
     </>
   );
 }

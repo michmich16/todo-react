@@ -1,0 +1,23 @@
+@import '../../assets/helper/Helper.scss';
+
+.deleteStyle{
+    display: flex;
+    justify-content: end;
+    padding-right: 2rem;
+    padding-top: 1rem;
+    vertical-align: middle;
+    .deleteButton{
+        background-color: transparent;
+        border: none;
+        font-size: 30px;
+        @media only screen and (max-width: 600px){
+            font-size: 20px;
+          }
+        span{
+            font-size: 40px;
+            @media only screen and (max-width: 600px){
+                font-size: 30px;
+              }
+        }
+    }
+}
