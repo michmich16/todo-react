@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import style from './Modal.module.scss';
 
@@ -11,24 +10,24 @@ export const Modal = ({ isOpen, onClose, onSubmit }) => {
   
   const handleSubmit = () => {
     onSubmit(inputValue);
-    onClose(); // Close modal after submit
+    onClose(); // lukker modal efter submit
   };
   
-  if (!isOpen) return null; // Don't render the modal if it's not open
+  if (!isOpen) return null; 
   
   return (
-    <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    <div className={style.modalStyle} onClick={onClose}>
+      <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
         <h2>Add new To Do list</h2>
         <input
           type="text"
           value={inputValue}
           onChange={handleInputChange}
-          placeholder="Type something..."
+          placeholder="Skriv her"
           />
-        <div className="modal-buttons">
-          <button onClick={handleSubmit}>Submit</button>
-          <button onClick={onClose}>Close</button>
+        <div className={style.modalButtons}>
+          <button className={style.modalButton} onClick={onClose}>Close</button>
+          <button className={style.modalButton} onClick={handleSubmit}>⊕Add</button>
         </div>
       </div>
     </div>

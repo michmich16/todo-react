@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-         <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit} />
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} onSubmit={handleSubmit} />
       <div className='mainHeader'>
         <button className='arrowButtonHeaderLeft'>⇦</button>
         <h1 className='logoHeader'>To Do</h1>
