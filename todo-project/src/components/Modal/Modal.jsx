@@ -1,20 +1,21 @@
+// Modal.jsx
 import React, { useState } from 'react';
 import style from './Modal.module.scss';
 
 export const Modal = ({ isOpen, onClose, onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
-  
+
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
-  
+
   const handleSubmit = () => {
     onSubmit(inputValue);
-    onClose(); // lukker modal efter submit
+    setInputValue(''); // Clear input after submission
   };
-  
-  if (!isOpen) return null; 
-  
+
+  if (!isOpen) return null;
+
   return (
     <div className={style.modalStyle} onClick={onClose}>
       <div className={style.modalContent} onClick={(e) => e.stopPropagation()}>
@@ -24,10 +25,10 @@ export const Modal = ({ isOpen, onClose, onSubmit }) => {
           value={inputValue}
           onChange={handleInputChange}
           placeholder="Skriv her"
-          />
+        />
         <div className={style.modalButtons}>
           <button className={style.modalButton} onClick={onClose}>Close</button>
-          <button className={style.modalButton} onClick={handleSubmit}>⊕Add</button>
+          <button className={style.modalButton} onClick={handleSubmit}>Add</button>
         </div>
       </div>
     </div>
